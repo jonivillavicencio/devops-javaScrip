@@ -1,4 +1,4 @@
-let frutas = ["banana", "manzana", "pera"]
+let frutas = ["banana", "manzana", "ciruela"]
 
 
 const mostrarFrutas = () => {
@@ -14,7 +14,7 @@ const mostrarFrutas = () => {
 const agregarFruta = () => {
     const nuevaFruta = document.getElementById('nuevaFruta').value
     frutas.push(nuevaFruta)
-    alert(Nueva fruta agregada: ${nuevaFruta})
+    alert(`Nueva fruta agregada: ${nuevaFruta}`)
     console.log("frutas", frutas);
     mostrarFrutas()
 }
