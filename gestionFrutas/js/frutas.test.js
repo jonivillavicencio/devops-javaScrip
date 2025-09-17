@@ -2,12 +2,7 @@
  * @jest-environment jsdom
  */
 
-const fs = require('fs')
-const path = require('path')
-
-// Cargar el contenido de tu archivo JS
-const archivo = fs.readFileSync(path.resolve(__dirname, './frutas.js'), 'utf8')
-eval(archivo)
+const { mostrarFrutas, agregarFruta, eliminarFruta, transformarFrutas } = require('./frutas.js')
 
 describe('Funciones de manejo de frutas', () => {
   beforeEach(() => {
