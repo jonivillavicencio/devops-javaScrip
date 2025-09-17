@@ -1,7 +1,7 @@
-// Hacemos frutas global para que Jest lo pueda sobreescribir en los tests
+// Hacemos frutas global para poder resetearlo en los tests
 global.frutas = ["banana", "manzana", "ciruela"]
 
-const mostrarFrutas = () => {
+function mostrarFrutas() {
     const listaFrutas = document.getElementById("listaFrutas")
     listaFrutas.innerHTML = ''
     frutas.forEach(fruta => {
@@ -11,7 +11,7 @@ const mostrarFrutas = () => {
     })
 }
 
-const agregarFruta = () => {
+function agregarFruta() {
     const nuevaFruta = document.getElementById('nuevaFruta').value
     frutas.push(nuevaFruta)
     alert(`Nueva fruta agregada: ${nuevaFruta}`)
@@ -19,16 +19,24 @@ const agregarFruta = () => {
     mostrarFrutas()
 }
 
-const eliminarFruta = () => {
+function eliminarFruta() {
     const posicionFruta = parseInt(document.getElementById('posicionFruta').value, 10)
     const cantidadFrutas = parseInt(document.getElementById('cantidadFruta').value, 10)
     frutas.splice(posicionFruta, cantidadFrutas)
     console.log("frutas", frutas);
 }
 
-const transformarFrutas = () => {
+function transformarFrutas() {
     const resultadoFrutas = document.getElementById('resultadoFrutas')
     const listaFrutasEnMayuscula = frutas.map(item => item.toUpperCase())
     console.log(listaFrutasEnMayuscula);
     resultadoFrutas.innerText = "Frutas en mayuscula: " + listaFrutasEnMayuscula.join(', ')
+}
+
+// Exportamos funciones para Jest
+module.exports = {
+    mostrarFrutas,
+    agregarFruta,
+    eliminarFruta,
+    transformarFrutas
 }
