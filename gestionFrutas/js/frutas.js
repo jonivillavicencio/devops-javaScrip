@@ -1,5 +1,5 @@
-let frutas = ["banana", "manzana", "ciruela"]
-
+// Hacemos frutas global para que Jest lo pueda sobreescribir en los tests
+global.frutas = ["banana", "manzana", "ciruela"]
 
 const mostrarFrutas = () => {
     const listaFrutas = document.getElementById("listaFrutas")
@@ -20,12 +20,11 @@ const agregarFruta = () => {
 }
 
 const eliminarFruta = () => {
-    const posicionFruta = document.getElementById('posicionFruta').value
-    const cantidadFrutas = document.getElementById('cantidadFruta').value
+    const posicionFruta = parseInt(document.getElementById('posicionFruta').value, 10)
+    const cantidadFrutas = parseInt(document.getElementById('cantidadFruta').value, 10)
     frutas.splice(posicionFruta, cantidadFrutas)
     console.log("frutas", frutas);
 }
-
 
 const transformarFrutas = () => {
     const resultadoFrutas = document.getElementById('resultadoFrutas')
@@ -33,5 +32,3 @@ const transformarFrutas = () => {
     console.log(listaFrutasEnMayuscula);
     resultadoFrutas.innerText = "Frutas en mayuscula: " + listaFrutasEnMayuscula.join(', ')
 }
-
-// beujnas,d
