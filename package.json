@@ -2,7 +2,7 @@
   "name": "devops-javascript",
   "version": "1.0.0",
   "description": "Proyecto con pruebas Jest para manejo de frutas",
-  "main": "tuArchivo.js",
+  "main": "frutas.js",
   "scripts": {
     "test": "jest"
   },
