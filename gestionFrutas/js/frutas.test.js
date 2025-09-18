@@ -2,11 +2,10 @@
  * @jest-environment jsdom
  */
 
-const { mostrarFrutas, agregarFruta, eliminarFruta, transformarFrutas } = require('./frutas.js')
+const { mostrarFrutas, agregarFruta, eliminarFruta, transformarFrutas } = require('./frutas')
 
 describe('Funciones de manejo de frutas', () => {
   beforeEach(() => {
-    // Reiniciar DOM
     document.body.innerHTML = `
       <ul id="listaFrutas"></ul>
       <input id="nuevaFruta" />
@@ -14,11 +13,7 @@ describe('Funciones de manejo de frutas', () => {
       <input id="cantidadFruta" />
       <div id="resultadoFrutas"></div>
     `
-
-    // Reiniciar array de frutas
     global.frutas = ["banana", "manzana", "pera"]
-
-    // Mock de alert y console.log
     global.alert = jest.fn()
     global.console.log = jest.fn()
   })
