@@ -1,15 +1,18 @@
 {
-  "name": "gestion",
+  "name": "devops-javascript",
   "version": "1.0.0",
-  "description": "Proyecto básico en Node.js",
-  "main": "index.js",
+  "description": "Proyecto con pruebas Jest para manejo de frutas",
+  "main": "frutas.js",
   "scripts": {
-    "start": "node index.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^30.1.2"
+  }
 }
