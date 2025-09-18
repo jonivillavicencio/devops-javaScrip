@@ -1,5 +1,5 @@
 global.frutas = ["banana", "manzana", "pera"]
-
+//empieza
 function mostrarFrutas() {
   const listaFrutas = document.getElementById("listaFrutas")
   listaFrutas.innerHTML = ''
