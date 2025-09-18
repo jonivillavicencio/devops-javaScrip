@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 // Cargar el contenido de tu archivo JS
-const archivo = fs.readFileSync(path.resolve(__dirname, './tuArchivo.js'), 'utf8')
+const archivo = fs.readFileSync(path.resolve(__dirname, './frutas.js'), 'utf8')
 eval(archivo)
 
 describe('Funciones de manejo de frutas', () => {
