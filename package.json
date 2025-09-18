@@ -5,7 +5,7 @@
   "main": "frutas.js",
   "scripts": {
     "start": "node frutas.js",
-    "test": "jest"
+    "test": "test"
   },
   "keywords": [],
   "author": "",
