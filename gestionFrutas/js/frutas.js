@@ -25,7 +25,7 @@ function agregarFruta() {
     frutas.push(nuevaFruta)
     alert(`Nueva fruta agregada: ${nuevaFruta}`)
     console.log("frutas", frutas);
-    mostrarFrutas()
+    
 }
 
 function eliminarFruta() {
