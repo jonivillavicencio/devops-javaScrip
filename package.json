@@ -2,10 +2,10 @@
   "name": "gestion",
   "version": "1.0.0",
   "description": "Proyecto básico en Node.js",
-  "main": "frutas.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node frutas.js",
-    "test": "test"
+    "start": "node index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
